@@ -1,0 +1,90 @@
+.chat-container {
+  max-width: 600px;
+  margin: 40px auto;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background: #ffffff;
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.user {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.user div {
+  display: inline-block;
+  background: #1976d2;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 18px;
+  max-width: 75%;
+}
+
+.bot {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.bot div {
+  display: inline-block;
+  background: #f1f1f1;
+  padding: 10px 14px;
+  border-radius: 18px;
+  max-width: 75%;
+}
+
+.summary-card {
+  background: #fff8e1;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.summary-card pre {
+  white-space: pre-wrap;
+}
+
+.quote-actions {
+  margin-top: 10px;
+}
+
+.quote-actions button {
+  background: #388e3c;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.input-area {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-left: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+}

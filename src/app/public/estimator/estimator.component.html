@@ -1,1 +1,47 @@
-<p>estimator works!</p>
+<div class="chat-container">
+
+  <div class="messages">
+
+    <div *ngFor="let msg of messages" [ngClass]="msg.type">
+
+      <!-- USER MESSAGE -->
+      <div *ngIf="msg.type === 'user'">
+        {{ msg.text }}
+      </div>
+
+      <!-- BOT MESSAGE -->
+      <div *ngIf="msg.type === 'bot'">
+        {{ msg.text }}
+      </div>
+
+      <!-- SUMMARY CARD -->
+      <div *ngIf="msg.type === 'summary'" class="summary-card">
+
+        <pre>{{ msg.text }}</pre>
+
+        <div class="quote-actions">
+          <button (click)="viewQuote(msg.publicCode)">
+            View Full Quote
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div *ngIf="loading" class="bot">
+      Typing...
+    </div>
+
+  </div>
+
+  <div class="input-area">
+    <input
+      [(ngModel)]="inputMessage"
+      (keyup.enter)="send()"
+      placeholder="Type your message..."
+    />
+    <button (click)="send()">Send</button>
+  </div>
+
+</div>
